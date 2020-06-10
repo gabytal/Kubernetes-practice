@@ -1,0 +1,10 @@
+apiVersion: v1       
+kind: Pod                  # Kubernetes controller objects
+metadata:
+  name: flaskapp-pod        # Pod name
+spec:                       # specification of the pod's contents
+  restartPolicy: Never
+  containers:
+  - name: flaskapp-container        # Name of the container
+    image: "gabytal333/flaskapp"
+    command: ["python", "flaskapp.py"] #Container Entrypoint
