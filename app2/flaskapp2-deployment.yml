@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: $DEPLOYMENT_NAME
+  name: flaskapp2-deployment
   labels:
-    app: $APPNAME
+    app: flaskapp2
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: $APPNAME
+      app: flaskapp2
   template:
     metadata:
       labels:
-        app: $APPNAME
+        app: flaskapp2
     spec:
       containers:
-      - name: $NAME
-        image: $image_name  
+      - name: flaskapp2
+        image: gabytal333/flaskapp2  
         ports:
         - containerPort: 5000
